@@ -1,19 +1,8 @@
 #!/usr/bin/env node
-import { greet } from '../src/cli.js';
-import { showGameTip, playRound, showEndMessage } from '../src/brain-even-helpers.js';
 
-const name = greet();
-let isVictory = true;
+import getBrainEvenQuestion from '../src/games/getBrainEvenQuestion.js';
+import start from '../src/index.js';
 
-showGameTip();
+const tip = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-for (let i = 0; i < 3; i += 1) {
-  const result = playRound();
-
-  if (!result) {
-    isVictory = false;
-    break;
-  }
-}
-
-showEndMessage(isVictory, name);
+start({ tip, getQuestion: getBrainEvenQuestion });
