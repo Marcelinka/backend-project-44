@@ -11,5 +11,9 @@ publish:
 	npm publish --dry-run
 
 # Обновить локально
-link:
+update:
 	npm link
+
+# Запуск линтера
+lint:
+	npx eslint .
