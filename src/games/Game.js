@@ -1,14 +1,12 @@
 import readlineSync from 'readline-sync';
 
 export default class Game {
-  name = '';
-
-  startMessage = '';
-
-  // eslint-disable-next-line class-methods-use-this
-  getQuestion = () => ({ text: '', rightAnswer: '' });
-
-  isVictory = true;
+  constructor() {
+    this.name = '';
+    this.startMessage = '';
+    this.getQuestion = () => ({ text: '', rightAnswer: '' });
+    this.isVictory = true;
+  }
 
   greet() {
     console.log('Welcome to the Brain Games!');

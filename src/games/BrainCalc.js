@@ -9,23 +9,26 @@ const OPERATIONS_END = 2;
 const OPERATIONS = ['+', '-', '*'];
 
 export default class BrainCalc extends Game {
-  startMessage = 'What is the result of the expression?';
+  constructor() {
+    super();
 
-  // eslint-disable-next-line class-methods-use-this
-  getQuestion = () => {
-    const firstNumber = getRandomInt(MIN_NUMBER, MAX_NUMBER);
-    const secondNumber = getRandomInt(MIN_NUMBER, MAX_NUMBER);
+    this.startMessage = 'What is the result of the expression?';
 
-    const operationIndex = getRandomInt(OPERATIONS_START, OPERATIONS_END);
-    const operation = OPERATIONS[operationIndex];
+    this.getQuestion = () => {
+      const firstNumber = getRandomInt(MIN_NUMBER, MAX_NUMBER);
+      const secondNumber = getRandomInt(MIN_NUMBER, MAX_NUMBER);
 
-    const question = `${firstNumber} ${operation} ${secondNumber}`;
-    // eslint-disable-next-line no-eval
-    const result = eval(question);
+      const operationIndex = getRandomInt(OPERATIONS_START, OPERATIONS_END);
+      const operation = OPERATIONS[operationIndex];
 
-    return {
-      text: question,
-      rightAnswer: String(result),
+      const question = `${firstNumber} ${operation} ${secondNumber}`;
+      // eslint-disable-next-line no-eval
+      const result = eval(question);
+
+      return {
+        text: question,
+        rightAnswer: String(result),
+      };
     };
-  };
+  }
 }

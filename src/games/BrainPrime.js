@@ -9,16 +9,19 @@ const PRIME_ANSWER = 'yes';
 const NOT_PRIME_ANSWER = 'no';
 
 export default class BrainCalc extends Game {
-  startMessage = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+  constructor() {
+    super();
 
-  // eslint-disable-next-line class-methods-use-this
-  getQuestion = () => {
-    const number = getRandomInt(MIN_NUMBER, MAX_NUMBER);
-    const rightAnswer = isPrimeNumber(number) ? PRIME_ANSWER : NOT_PRIME_ANSWER;
+    this.startMessage = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-    return {
-      text: String(number),
-      rightAnswer,
+    this.getQuestion = () => {
+      const number = getRandomInt(MIN_NUMBER, MAX_NUMBER);
+      const rightAnswer = isPrimeNumber(number) ? PRIME_ANSWER : NOT_PRIME_ANSWER;
+
+      return {
+        text: String(number),
+        rightAnswer,
+      };
     };
-  };
+  }
 }

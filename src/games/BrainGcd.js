@@ -6,18 +6,21 @@ const MIN_NUMBER = 2;
 const MAX_NUMBER = 100;
 
 export default class BrainCalc extends Game {
-  startMessage = 'Find the greatest common divisor of given numbers.';
+  constructor() {
+    super();
 
-  // eslint-disable-next-line class-methods-use-this
-  getQuestion = () => {
-    const number1 = getRandomInt(MIN_NUMBER, MAX_NUMBER);
-    const number2 = getRandomInt(MIN_NUMBER, MAX_NUMBER);
+    this.startMessage = 'Find the greatest common divisor of given numbers.';
 
-    const rightAnswer = String(getGcd(number1, number2));
+    this.getQuestion = () => {
+      const number1 = getRandomInt(MIN_NUMBER, MAX_NUMBER);
+      const number2 = getRandomInt(MIN_NUMBER, MAX_NUMBER);
 
-    return {
-      text: `${number1} ${number2}`,
-      rightAnswer,
+      const rightAnswer = String(getGcd(number1, number2));
+
+      return {
+        text: `${number1} ${number2}`,
+        rightAnswer,
+      };
     };
-  };
+  }
 }
