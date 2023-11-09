@@ -10,3 +10,7 @@
 #### Демо brain-calc
 
 [![asciicast](https://asciinema.org/a/N6piAmGLMbrLm6NCEmrXlGaRd.svg)](https://asciinema.org/a/N6piAmGLMbrLm6NCEmrXlGaRd)
+
+#### Демо brain-gcd
+
+[![asciicast](https://asciinema.org/a/vbQtjW9wwsUEfyDiuES6YEUNm.svg)](https://asciinema.org/a/vbQtjW9wwsUEfyDiuES6YEUNm)
