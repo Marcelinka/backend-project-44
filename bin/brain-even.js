@@ -1,8 +1,5 @@
 #!/usr/bin/env node
 
-import start from '../src/index.js';
-import getBrainEvenQuestion from '../src/games/getBrainEvenQuestion.js';
+import { BrainEven } from '../src/index.js';
 
-const tip = 'Answer "yes" if the number is even, otherwise answer "no".';
-
-start({ tip, getQuestion: getBrainEvenQuestion });
+new BrainEven().start();

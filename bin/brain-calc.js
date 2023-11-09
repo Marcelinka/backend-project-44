@@ -1,8 +1,5 @@
 #!/usr/bin/env node
 
-import start from '../src/index.js';
-import getBrainCalcQuestion from '../src/games/getBrainCalcQuestion.js';
+import { BrainCalc } from '../src/index.js';
 
-const tip = 'What is the result of the expression?';
-
-start({ tip, getQuestion: getBrainCalcQuestion });
+new BrainCalc().start();
