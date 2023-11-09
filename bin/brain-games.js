@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import Game from '../src/games/Game.js';
+import greet from '../src/game-helpers/greet.js';
 
-new Game().greet();
+greet();
